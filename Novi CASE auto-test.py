@@ -1,5 +1,3 @@
-#Test padajuceg menija
-
 import os
 import webbrowser
 import pyautogui
@@ -15,7 +13,16 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 from collections import Counter
+from bs4 import BeautifulSoup
+import arrow
+import pyperclip
 
+print('Unesite USERNAME')
+user=input()
+print('Unesite SIFRU')
+sifra=input()
+print('Unesite JMBG Korisnika')
+JMBG_Korisnika=input()
 
 
 driver=webdriver.Chrome()
@@ -29,35 +36,30 @@ btn=driver.find_element_by_id(id)
 btn.click()
 
 
-pyautogui.typewrite ('jpejin')
+pyautogui.typewrite (user)
 pyautogui.press('enter')
 
 csss='password'
 btnn=driver.find_element_by_id(csss)
 btnn.click()
-pyautogui.typewrite('1234asdf')
+pyautogui.typewrite(sifra)
 
 lgn='login'
 btnn1=driver.find_element_by_id(lgn)
 btnn1.click()
 
-time.sleep(2)
-try:
-    lista =driver.find_element_by_xpath('/html/body/app-root/app-home/div/div[2]/p-scrollpanel/div/div[1]/div/div/app-menu/div/ul/ul')
-    items = lista.find_elements_by_tag_name("li")
-    if (len(items) > 1):
-        os.system('notepad.exe Greska407.txt')
-    else:
-        os.system("notepad.exe Greska408.txt")
-except:
-    NoSuchElementException
-    os.system("notepad.exe Greska408.txt")
+time.sleep(1)
 
-#pretraga po tekstu
-#driver.find_elements_by_xpath("//*[contains(text(), 'Nemate pravo pristupa nijednom')]")
+osiguranici=driver.find_element_by_xpath('/html/body/app-root/app-home/div/div[2]/p-scrollpanel/div/div[1]/div/div/app-menu/div/ul/ul/li[2]')
+osiguranici.click()
+time.sleep(0.5)
 
-#odredjivanje velicine liste
-#  lista =driver.find_element_by_xpath('/html/body/app-root/app-home/div/div[2]/p-scrollpanel/div/div[1]/div/div/app-menu/div/ul/ul')
- # items = lista.find_elements_by_tag_name("li")
-#   if (len(items) > 1):
-#      os.system('notepad.exe Greska407.txt')
+ocisti=driver.find_element_by_xpath('/html/body/app-root/app-home/div/div[3]/div/div/app-osiguranik/div/div/p-button[2]/button')
+ocisti.click()
+
+osiguraniciJMBG=driver.find_element_by_xpath('/html/body/app-root/app-home/div/div[3]/div/div/app-osiguranik/div/div/span[1]/input')
+osiguraniciJMBG.click()
+pyautogui.typewrite(JMBG_Korisnika)
+time.sleep(1)
+
+

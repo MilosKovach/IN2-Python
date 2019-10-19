@@ -78,4 +78,4 @@ else:
     os.system("notepad.exe Greska407.txt")
 
 
-btn=driver.find_elements_by_xpath("//*[contains(text(), '15656')]")
+

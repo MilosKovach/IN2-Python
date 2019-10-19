@@ -19,7 +19,7 @@ from selenium.common.exceptions import TimeoutException
 
 
 
-driver=webdriver.firefox
+driver=webdriver.Chrome()
 driver.maximize_window()
 driver.get('http://bg-ddordzo-01/dzo/#/session')
 
