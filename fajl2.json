@@ -1,0 +1,245 @@
+[
+{
+  "elements": [
+    {
+      "keyword": "Scenario Outline",
+      "location": "features/search.feature:12",
+      "name": "Kreiranje prvog Uputa osiguranika -- @1.1 ",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "features/search.feature:3",
+          "match": {
+            "arguments": [
+              {
+                "name": "ID_OSIGURANIKA",
+                "value": "20"
+              }
+            ],
+            "location": "features/steps/search.py:19"
+          },
+          "name": "postoji osiguranik sa ID brojem 20",
+          "result": {
+            "duration": 0.08392977714538574,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "features/search.feature:4",
+          "match": {
+            "arguments": [
+              {
+                "name": "ID_DOK",
+                "value": "1080"
+              }
+            ],
+            "location": "features/steps/search.py:24"
+          },
+          "name": "postoji dokument sa ID brojem 1080",
+          "result": {
+            "duration": 2.466776132583618,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "features/search.feature:5",
+          "match": {
+            "arguments": [
+              {
+                "name": "ID_POKRICA",
+                "value": "Ambula"
+              }
+            ],
+            "location": "features/steps/search.py:39"
+          },
+          "name": "postoji pokri\u0107e sa nazivom Ambula",
+          "result": {
+            "duration": 2.39638352394104,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "features/search.feature:7",
+          "match": {
+            "arguments": [
+              {
+                "name": "STAVKA_CENA",
+                "value": "Fizija"
+              },
+              {
+                "name": "TERMIN",
+                "value": "1122"
+              },
+              {
+                "name": "DOKTOR",
+                "value": "Ivan Vujic"
+              },
+              {
+                "name": "ID_POKRICA",
+                "value": "Ambula"
+              }
+            ],
+            "location": "features/steps/search.py:55"
+          },
+          "name": "korisnik unosi Fizija, 1122, Ivan Vujic, Ambula",
+          "result": {
+            "duration": 4.630689382553101,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "features/search.feature:8",
+          "match": {
+            "arguments": [
+              {
+                "name": "IZNOS",
+                "value": "16.95"
+              }
+            ],
+            "location": "features/steps/search.py:78"
+          },
+          "name": "na pokri\u0107u rezervisan iznos treba da bude povecan za 16.95",
+          "result": {
+            "duration": 0.031234264373779297,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    },
+    {
+      "keyword": "Scenario Outline",
+      "location": "features/search.feature:13",
+      "name": "Kreiranje prvog Uputa osiguranika -- @1.2 ",
+      "status": "passed",
+      "steps": [
+        {
+          "keyword": "Given",
+          "location": "features/search.feature:3",
+          "match": {
+            "arguments": [
+              {
+                "name": "ID_OSIGURANIKA",
+                "value": "1"
+              }
+            ],
+            "location": "features/steps/search.py:19"
+          },
+          "name": "postoji osiguranik sa ID brojem 1",
+          "result": {
+            "duration": 0.2499840259552002,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "features/search.feature:4",
+          "match": {
+            "arguments": [
+              {
+                "name": "ID_DOK",
+                "value": "1011"
+              }
+            ],
+            "location": "features/steps/search.py:24"
+          },
+          "name": "postoji dokument sa ID brojem 1011",
+          "result": {
+            "duration": 1.5097999572753906,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "And",
+          "location": "features/search.feature:5",
+          "match": {
+            "arguments": [
+              {
+                "name": "ID_POKRICA",
+                "value": "Dijagnostika"
+              }
+            ],
+            "location": "features/steps/search.py:39"
+          },
+          "name": "postoji pokri\u0107e sa nazivom Dijagnostika",
+          "result": {
+            "duration": 2.405447483062744,
+            "status": "passed"
+          },
+          "step_type": "given"
+        },
+        {
+          "keyword": "When",
+          "location": "features/search.feature:7",
+          "match": {
+            "arguments": [
+              {
+                "name": "STAVKA_CENA",
+                "value": "alergol"
+              },
+              {
+                "name": "TERMIN",
+                "value": "1130"
+              },
+              {
+                "name": "DOKTOR",
+                "value": "Ivan Vujic"
+              },
+              {
+                "name": "ID_POKRICA",
+                "value": "Dijagnostika"
+              }
+            ],
+            "location": "features/steps/search.py:55"
+          },
+          "name": "korisnik unosi alergol, 1130, Ivan Vujic, Dijagnostika",
+          "result": {
+            "duration": 4.75809383392334,
+            "status": "passed"
+          },
+          "step_type": "when"
+        },
+        {
+          "keyword": "Then",
+          "location": "features/search.feature:8",
+          "match": {
+            "arguments": [
+              {
+                "name": "IZNOS",
+                "value": "29.67"
+              }
+            ],
+            "location": "features/steps/search.py:78"
+          },
+          "name": "na pokri\u0107u rezervisan iznos treba da bude povecan za 29.67",
+          "result": {
+            "duration": 0.02779984474182129,
+            "status": "passed"
+          },
+          "step_type": "then"
+        }
+      ],
+      "tags": [],
+      "type": "scenario"
+    }
+  ],
+  "keyword": "Feature",
+  "location": "features/search.feature:1",
+  "name": "GTEST provera formiranja stavke uputa",
+  "status": "passed",
+  "tags": []
+}
+]

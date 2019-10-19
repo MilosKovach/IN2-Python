@@ -1,0 +1,251 @@
+﻿[
+   {
+      "keyword": "Feature",
+      "name": "GTEST provera formiranja stavke uputa",
+      "tags": [],
+      "elements": [
+         {
+            "type": "scenario",
+            "keyword": "Scenario Outline",
+            "name": "GTEST provera formiranja stavke uputa -- @1.1 ",
+            "tags": [
+               {
+                  "name": "@TEST_IRCAD-508",
+                  "line": 13
+               }
+            ],
+            "steps": [
+               {
+                  "keyword": "Given",
+                  "name": "postoji osiguranik sa ID brojem 20",
+                  "match": {
+                     "location": "features/steps/search.py:19",
+                     "arguments": [
+                        {
+                           "value": "20",
+                           "name": "ID_OSIGURANIKA"
+                        }
+                     ]
+                  },
+                  "result": {
+                     "status": "passed",
+                     "duration": 0.085951805
+                  },
+                  "line": 5
+               },
+               {
+                  "keyword": "And",
+                  "name": "postoji dokument sa ID brojem 1080",
+                  "match": {
+                     "location": "features/steps/search.py:24",
+                     "arguments": [
+                        {
+                           "value": "1080",
+                           "name": "ID_DOK"
+                        }
+                     ]
+                  },
+                  "result": {
+                     "status": "passed",
+                     "duration": 3.3090754
+                  },
+                  "line": 6
+               },
+               {
+                  "keyword": "And",
+                  "name": "postoji pokriće sa nazivom Ambula",
+                  "match": {
+                     "location": "features/steps/search.py:39",
+                     "arguments": [
+                        {
+                           "value": "Ambula",
+                           "name": "ID_POKRICA"
+                        }
+                     ]
+                  },
+                  "result": {
+                     "status": "passed",
+                     "duration": 2.59549
+                  },
+                  "line": 7
+               },
+               {
+                  "keyword": "When",
+                  "name": "korisnik unosi Fizija, 1122, Ivan Vujic, Ambula",
+                  "match": {
+                     "location": "features/steps/search.py:55",
+                     "arguments": [
+                        {
+                           "value": "Fizija",
+                           "name": "STAVKA_CENA"
+                        },
+                        {
+                           "value": "1122",
+                           "name": "TERMIN"
+                        },
+                        {
+                           "value": "Ivan Vujic",
+                           "name": "DOKTOR"
+                        },
+                        {
+                           "value": "Ambula",
+                           "name": "ID_POKRICA"
+                        }
+                     ]
+                  },
+                  "result": {
+                     "status": "passed",
+                     "duration": 4.6787815
+                  },
+                  "line": 9
+               },
+               {
+                  "keyword": "Then",
+                  "name": "na pokriću rezervisan iznos treba da bude povecan za 16.95",
+                  "match": {
+                     "location": "features/steps/search.py:78",
+                     "arguments": [
+                        {
+                           "value": "16.95",
+                           "name": "IZNOS"
+                        }
+                     ]
+                  },
+                  "result": {
+                     "status": "passed",
+                     "duration": 0.032978535
+                  },
+                  "line": 10
+               }
+            ],
+            "line": 14,
+            "uri": "features/search.feature",
+            "description": "",
+            "id": 1
+         },
+         {
+            "type": "scenario",
+            "keyword": "Scenario Outline",
+            "name": "GTEST provera formiranja stavke uputa -- @1.2 ",
+            "tags": [
+               {
+                  "name": "@TEST_IRCAD-508",
+                  "line": 14
+               }
+            ],
+            "steps": [
+               {
+                  "keyword": "Given",
+                  "name": "postoji osiguranik sa ID brojem 1",
+                  "match": {
+                     "location": "features/steps/search.py:19",
+                     "arguments": [
+                        {
+                           "value": "1",
+                           "name": "ID_OSIGURANIKA"
+                        }
+                     ]
+                  },
+                  "result": {
+                     "status": "passed",
+                     "duration": 0.379781
+                  },
+                  "line": 5
+               },
+               {
+                  "keyword": "And",
+                  "name": "postoji dokument sa ID brojem 1011",
+                  "match": {
+                     "location": "features/steps/search.py:24",
+                     "arguments": [
+                        {
+                           "value": "1011",
+                           "name": "ID_DOK"
+                        }
+                     ]
+                  },
+                  "result": {
+                     "status": "passed",
+                     "duration": 1.6920156
+                  },
+                  "line": 6
+               },
+               {
+                  "keyword": "And",
+                  "name": "postoji pokriće sa nazivom Dijagnostika",
+                  "match": {
+                     "location": "features/steps/search.py:39",
+                     "arguments": [
+                        {
+                           "value": "Dijagnostika",
+                           "name": "ID_POKRICA"
+                        }
+                     ]
+                  },
+                  "result": {
+                     "status": "passed",
+                     "duration": 2.3680766
+                  },
+                  "line": 7
+               },
+               {
+                  "keyword": "When",
+                  "name": "korisnik unosi alergol, 1130, Ivan Vujic, Dijagnostika",
+                  "match": {
+                     "location": "features/steps/search.py:55",
+                     "arguments": [
+                        {
+                           "value": "alergol",
+                           "name": "STAVKA_CENA"
+                        },
+                        {
+                           "value": "1130",
+                           "name": "TERMIN"
+                        },
+                        {
+                           "value": "Ivan Vujic",
+                           "name": "DOKTOR"
+                        },
+                        {
+                           "value": "Dijagnostika",
+                           "name": "ID_POKRICA"
+                        }
+                     ]
+                  },
+                  "result": {
+                     "status": "passed",
+                     "duration": 4.707753
+                  },
+                  "line": 9
+               },
+               {
+                  "keyword": "Then",
+                  "name": "na pokriću rezervisan iznos treba da bude povecan za 29.67",
+                  "match": {
+                     "location": "features/steps/search.py:78",
+                     "arguments": [
+                        {
+                           "value": "29.67",
+                           "name": "IZNOS"
+                        }
+                     ]
+                  },
+                  "result": {
+                     "status": "passed",
+                     "duration": 0.0359807
+                  },
+                  "line": 10
+               }
+            ],
+            "line": 15,
+            "uri": "features/search.feature",
+            "description": "",
+            "id": 2
+         }
+      ],
+      "line": 1,
+      "uri": "features/search.feature",
+      "description": "",
+      "id": 0
+   }
+]
